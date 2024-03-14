@@ -26,7 +26,9 @@ The system is developed in Python and the web application in Flask.
 #### Installation
 
 __Install Dependencies__
+
 `pip install -r requirements.txt`
 
 __Run the Web Application__
+
 `python app.py`
