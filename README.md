@@ -7,9 +7,11 @@ El sistema está desarrollado en Python y la aplicación web en Flask.
 #### Instalación
 
 __Instalar Dependencias__
+
 `pip install -r requirements.txt`
 
 __Correr la aplicación web__
+
 `python app.py`
 
 - Video de explicación del código: https://youtu.be/fsovyYasDIU?si=JjT0Uy8Rh9t-AuvK
