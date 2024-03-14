@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de datos de la vivienda</title>
+    <!-- Añadimos la librería de Google Places Autocomplete -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqu7M2nuCiLTiH1mIbTD5Snn46Gj6ajxs&libraries=places"></script>
+    <!-- Añadimos la hoja de estilos CSS -->
+    <link rel="stylesheet" href="./static/style/style.css">
+</head>
+<body>
+    <h1>Formulario de datos de la vivienda</h1>
+    <form class="formulario" method="post" action="/resultado" enctype="multipart/form-data">
+        <!-- Campos para recopilar los datos de la vivienda -->
+        
+        <div class="columna">
+          <label for="direccion">Dirección:</label>
+          <input class="campo" type="text" id="direccion" name="direccion" placeholder="Escribe la dirección" autocomplete="off"><br><br>
+
+          <label for="price">Precio del inmueble (mensual):</label>
+          <input class="campo" type="number" id="price" name="price" required><br><br>
+
+          <label for="area">Metros Cuadrados:</label>
+          <input class="campo" type="number" id="area" name="area" required><br><br>
+
+          <label for="nRooms">Número de Habitaciones:</label>
+          <input class="campo" type="number" id="nRooms" name="nRooms" required><br><br>
+          
+          <label for="nLiving">Número de salones/comedores:</label>
+          <input class="campo" type="number" id="nLiving" name="nLiving" required><br><br>
+          
+          <label for="nKitchens">Número de cocinas:</label>
+          <input class="campo" type="number" id="nKitchens" name="nKitchens" required><br><br>
+
+          <label for="nBathrooms">Número de baños:</label>
+          <input class="campo" type="number" id="nBathrooms" name="nBathrooms" required><br><br>
+          
+          <label for="nBalconies">Número de balcones:</label>
+          <input class="campo" type="number" id="nBalconies" name="nBalconies" required><br><br>
+          
+          <label for="nTerraces">Número de terrazas:</label>
+          <input class="campo" type="number" id="nTerraces" name="nTerraces" required><br><br>
+        </div>
+
+        <div class="columna">
+          <label for="nElevators">Número de ascensores:</label>
+          <input class="campo" type="number" id="nElevators" name="nElevators" required><br><br>
+
+          <label for="climat">Sistemas de climatización (separar por comas):</label>
+          <input class="campo" type="text" id="climat" name="climat" required><br><br>
+  
+          <label for="height">Altura del inmueble:</label>
+          <input class="campo" type="number" id="height" name="height" required><br><br>
+  
+          <label for="floor">Piso del inmueble:</label>
+          <input class="campo" type="number" id="floor" name="floor" required><br><br>
+  
+          <label for="buildingYear">Año de construcción:</label>
+          <input class="campo" type="number" id="buildingYear" name="buildingYear" required><br><br>
+  
+          <label for="taxes">Impuestos anuales (IBI,...):</label>
+          <input class="campo" type="number" id="taxes" name="taxes" required><br><br>
+          
+          <label for="state">Estado del inmueble (reformar, entrar a vivir):</label>
+          <input class="campo" type="text" id="state" name="state" required><br><br>
+          
+          <label for="extras">Extras (separar por comas):</label>
+          <input class="campo" type="text" id="extras" name="extras"><br><br>
+          
+          <label for="garage">Garaje:</label>
+          <input type="checkbox" id="garage" name="garage" value="true">
+        </div>
+
+        <!-- Campos para subir imágenes por estancia -->
+        <div style="width: 100%;">
+          <div class="campo">
+            <label for="img_kitchen">Imágenes de Cocina:</label>
+            <input type="file" id="img_kitchen" name="img_kitchen[]" multiple>
+            <small>Selecciona una o varias imágenes para la cocina.</small>
+          </div>
+  
+          <div class="campo">
+            <label for="img_rooms">Imágenes de Habitaciones:</label>
+            <input type="file" id="img_rooms" name="img_rooms[]" multiple>
+            <small>Selecciona una o varias imágenes para las habitaciones.</small>
+          </div>
+  
+          <div class="campo">
+            <label for="img_living">Imágenes de Salón:</label>
+            <input type="file" id="img_living" name="img_living[]" multiple>
+            <small>Selecciona una o varias imágenes para el salón.</small>
+          </div>
+  
+          <div class="campo">
+            <label for="img_bath">Imágenes de Baño:</label>
+            <input type="file" id="img_bath" name="img_bath[]" multiple>
+            <small>Selecciona una o varias imágenes para el baño.</small>
+          </div>
+  
+          <div class="campo">
+            <label for="img_terrace">Imágenes de Terraza:</label>
+            <input type="file" id="img_terrace" name="img_terrace[]" multiple>
+            <small>Selecciona una o varias imágenes para la terraza.</small>
+          </div>
+        </div>
+        
+        <input class="btn" type="submit" value="Generar Anuncio">
+    </form>
+
+    <!-- Añadimos el script para el autocompletar de google places-->
+    <script>
+      // Inicializar el autocompletado de dirección
+      function initAutocomplete() {
+          var input = document.getElementById('direccion');
+          var autocomplete = new google.maps.places.Autocomplete(input);
+      }
+      // Ejecutar la función de inicialización cuando la página se cargue
+      google.maps.event.addDomListener(window, 'load', initAutocomplete);
+  </script>
+</body>
+</html>

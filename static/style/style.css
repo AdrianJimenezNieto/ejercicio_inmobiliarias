@@ -1,0 +1,70 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,400&family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 90%;
+}
+
+/* Estilos para la página de la respuesta */
+pre{
+  font-family: 'Roboto', sans-serif;
+  white-space: pre-wrap;
+}
+
+.text-container{
+  margin: 10px;
+  width: 70%;
+  align-items: center;
+}
+
+/* Estilos para el formulario */
+.formulario {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Estilos para cada columna */
+.columna {
+  width: 48%;
+}
+
+/* Estilos para los campos del formulario */
+.campo {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="checkbox"] {
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Estilos para el botón */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  flex:1;
+  height:3rem;
+  margin: 1rem;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
