@@ -7,10 +7,15 @@ El sistema está desarrollado en Python y la aplicación web en Flask.
 #### Instalación
 
 __Instalar Dependencias__
+
 `pip install -r requirements.txt`
 
 __Correr la aplicación web__
+
 `python app.py`
+
+- Video de explicación del código: https://youtu.be/fsovyYasDIU?si=JjT0Uy8Rh9t-AuvK
+- Vídeo de resultados del generador de anuncios: https://youtu.be/N7IGHN7pV4s?si=5n6jcwzL6HI5NM03
 
 ## Automatic Real Estate Listings (EN)
 
@@ -21,7 +26,9 @@ The system is developed in Python and the web application in Flask.
 #### Installation
 
 __Install Dependencies__
+
 `pip install -r requirements.txt`
 
 __Run the Web Application__
+
 `python app.py`
